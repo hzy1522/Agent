@@ -1,0 +1,180 @@
+2026-03-09 15:53:04,085 - agent - INFO - logger_handler.py:54 - info
+2026-03-09 15:53:04,086 - agent - ERROR - logger_handler.py:55 - error
+2026-03-09 15:53:04,086 - agent - DEBUG - logger_handler.py:56 - debug
+2026-03-09 15:53:04,086 - agent - WARNING - logger_handler.py:57 - warning
+2026-03-09 17:38:36,663 - agent - ERROR - file_handler.py:38 - [listdir_with_allowed_type]data不是文件夹
+2026-03-09 17:38:36,663 - agent - ERROR - file_handler.py:9 - [md5计算]文件txt不存在
+2026-03-09 17:38:36,663 - agent - ERROR - vector_store.py:95 - [加载知识库]文件txt处理失败，Error loading txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-03-09 17:38:36,665 - agent - ERROR - file_handler.py:9 - [md5计算]文件pdf不存在
+2026-03-09 17:38:36,665 - agent - ERROR - vector_store.py:95 - [加载知识库]文件pdf处理失败，File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 77, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 62, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 47, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-03-09 17:41:01,871 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问.pdf处理完毕
+2026-03-09 17:41:01,874 - agent - ERROR - vector_store.py:96 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问2.txt处理失败，Error loading E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问2.txt
+2026-03-09 17:41:01,879 - agent - ERROR - vector_store.py:96 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫拖一体机器人100问.txt处理失败，Error loading E:\LLM微调\黑马\code\Agent-code\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\LLM微调\黑马\code\Agent-code\data\扫拖一体机器人100问.txt
+2026-03-09 17:41:01,880 - agent - ERROR - vector_store.py:96 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\故障排除.txt处理失败，Error loading E:\LLM微调\黑马\code\Agent-code\data\故障排除.txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\LLM微调\黑马\code\Agent-code\data\故障排除.txt
+2026-03-09 17:41:01,881 - agent - ERROR - vector_store.py:96 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\维护保养.txt处理失败，Error loading E:\LLM微调\黑马\code\Agent-code\data\维护保养.txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\LLM微调\黑马\code\Agent-code\data\维护保养.txt
+2026-03-09 17:41:01,882 - agent - ERROR - vector_store.py:96 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\选购指南.txt处理失败，Error loading E:\LLM微调\黑马\code\Agent-code\data\选购指南.txt
+Traceback (most recent call last):
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\RAG\vector_store.py", line 60, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\LLM微调\黑马\code\Agent-code\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\envs\agent\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\LLM微调\黑马\code\Agent-code\data\选购指南.txt
+2026-03-09 17:42:29,921 - agent - INFO - vector_store.py:75 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问.pdf已经存在于知识库内，跳过
+2026-03-09 17:42:33,592 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫地机器人100问2.txt处理完毕
+2026-03-09 17:42:37,738 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\扫拖一体机器人100问.txt处理完毕
+2026-03-09 17:42:45,251 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\故障排除.txt处理完毕
+2026-03-09 17:42:49,754 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\维护保养.txt处理完毕
+2026-03-09 17:42:54,047 - agent - INFO - vector_store.py:93 - [加载知识库]文件E:\LLM微调\黑马\code\Agent-code\data\选购指南.txt处理完毕
