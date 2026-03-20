@@ -92,3 +92,39 @@
 2026-03-11 15:29:15,277 - agent - INFO - middleware.py:20 - [tool monitor]执行rag_summarize工具成功!
 2026-03-11 15:29:15,278 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带9条消息
 2026-03-11 15:29:15,278 - agent - DEBUG - middleware.py:39 - [log_before_model]ToolMessage | 扫地机器人日常保养方法包括：定期清理尘盒和滤网，避免灰尘堆积影响吸力；检查并清理滚刷和边刷上的缠绕物，如毛发或线绳；擦拭传感器和充电触点，确保正常工作；定期检查轮子是否被异物卡住；保持充电座周围清洁，确保顺利回充。
+2026-03-11 17:16:48,588 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/选购指南.txt已经存在于知识库内，跳过
+2026-03-11 17:16:48,588 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/扫地机器人100问2.txt已经存在于知识库内，跳过
+2026-03-11 17:16:48,589 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/故障排除.txt已经存在于知识库内，跳过
+2026-03-11 17:16:48,589 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/扫拖一体机器人100问.txt已经存在于知识库内，跳过
+2026-03-11 17:16:48,589 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/维护保养.txt已经存在于知识库内，跳过
+2026-03-11 17:16:48,590 - agent - INFO - vector_store.py:74 - [加载知识库]文件/Users/lhy/pyCharm-project/Agent/data/扫地机器人100问.pdf已经存在于知识库内，跳过
+2026-03-11 17:17:31,789 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带1条消息
+2026-03-11 17:17:31,789 - agent - DEBUG - middleware.py:39 - [log_before_model]HumanMessage | 给我生成我的使用报告
+2026-03-11 17:17:33,378 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：工具调用信息：fill_context_for_report
+2026-03-11 17:17:33,378 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：工具调用信息：{}
+2026-03-11 17:17:33,379 - agent - INFO - middleware.py:20 - [tool monitor]执行fill_context_for_report工具成功!
+2026-03-11 17:17:33,380 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带3条消息
+2026-03-11 17:17:33,380 - agent - DEBUG - middleware.py:39 - [log_before_model]ToolMessage | fill_context_for_report已经调用
+2026-03-11 17:17:35,644 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：工具调用信息：get_user_id
+2026-03-11 17:17:35,644 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：工具调用信息：{}
+2026-03-11 17:17:35,645 - agent - INFO - middleware.py:20 - [tool monitor]执行get_user_id工具成功!
+2026-03-11 17:17:35,645 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带5条消息
+2026-03-11 17:17:35,646 - agent - DEBUG - middleware.py:39 - [log_before_model]ToolMessage | 1003
+2026-03-11 17:17:36,912 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：工具调用信息：get_current_month
+2026-03-11 17:17:36,912 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：工具调用信息：{}
+2026-03-11 17:17:36,913 - agent - INFO - middleware.py:20 - [tool monitor]执行get_current_month工具成功!
+2026-03-11 17:17:36,913 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带7条消息
+2026-03-11 17:17:36,913 - agent - DEBUG - middleware.py:39 - [log_before_model]ToolMessage | 2025-04
+2026-03-11 17:17:40,267 - agent - INFO - middleware.py:16 - [tool monitor]执行工具：工具调用信息：fetch_external_data
+2026-03-11 17:17:40,267 - agent - INFO - middleware.py:17 - [tool monitor]传入参数：工具调用信息：{'user_id': '1003', 'month': '2025-04'}
+2026-03-11 17:17:40,270 - agent - INFO - middleware.py:20 - [tool monitor]执行fetch_external_data工具成功!
+2026-03-11 17:17:40,270 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带9条消息
+2026-03-11 17:17:40,270 - agent - DEBUG - middleware.py:39 - [log_before_model]ToolMessage | {"特征": "90㎡ | 1狗 | 短毛地毯", "效率": "毛发清理:93%\\n地毯增压使用:17次/月", "耗材": "胶刷更换:剩余45天\\n尘盒容量:每2天清理", "对比": "毛发处理效率前10%"}
+2026-03-11 17:18:26,353 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带1条消息
+2026-03-11 17:18:26,354 - agent - DEBUG - middleware.py:39 - [log_before_model]HumanMessage | 你是啥
+2026-03-11 17:18:44,683 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带1条消息
+2026-03-11 17:18:44,684 - agent - DEBUG - middleware.py:39 - [log_before_model]HumanMessage | 你用的什么模型
+2026-03-11 17:19:00,131 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带1条消息
+2026-03-11 17:19:00,132 - agent - DEBUG - middleware.py:39 - [log_before_model]HumanMessage | 你是用的千文大模型吗
+2026-03-11 17:19:21,093 - agent - INFO - middleware.py:38 - [log_before_model]模型即将开始执行，并附带1条消息
+2026-03-11 17:19:21,094 - agent - DEBUG - middleware.py:39 - [log_before_model]HumanMessage | 你没有用到大模型吗

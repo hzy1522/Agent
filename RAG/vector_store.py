@@ -1,6 +1,5 @@
 import os
 
-from google.genai.types import Retrieval
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from utils.config_handler import chroma_conf
